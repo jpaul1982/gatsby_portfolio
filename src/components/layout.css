@@ -1,20 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -1;
+	background-color: #e4dbd2; 
+}
+
 article,
 aside,
 details,
 figcaption,
 figure,
-footer,
-header,
 main,
 menu,
 nav,
@@ -28,6 +41,7 @@ progress,
 video {
   display: inline-block;
 }
+
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -41,10 +55,10 @@ template {
 }
 a {
   background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-  color:#333;
+  color: #333;
   text-decoration: none;
 }
+
 a:active,
 a:hover {
   outline-width: 0;
@@ -68,6 +82,76 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
+header {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 35px 100px 0;
+	animation: 1s fadein 0.5s forwards;
+	opacity: 0;
+	color: #bbac9c;
+}
+header nav {
+	display: flex;
+  margin-right: -15px;
+}
+header nav li {
+	margin-right: 15px;
+}
+@keyframes fadein {
+	100% {
+		opacity: 1;
+	}
+}
+.main{
+  position: relative;
+	justify-content: center;
+	text-align: center;
+  min-height: 500px;
+  margin-top: 20px;
+  padding: 0px;
+  color: #333;
+}
+.hero h1{
+  font-size: 60px;
+}
+.hero p{
+  font-size: 30px;
+}
+.grid {
+  width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.grid li {
+  display: flex;
+  flex-basis: 25%;
+	height: 250px;
+	padding: 20px;
+	background-clip: content-box;
+	background-size: cover;
+	background-position: center;
+}
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 80px;
+}
+.projects .grid li {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+	flex-basis: 50%;
+  text-align: center;
+  width: 300px;
+  
+}
+
 mark {
   background-color: #ff0;
   color: #000;
@@ -75,6 +159,7 @@ mark {
 small {
   font-size: 80%;
 }
+
 sub,
 sup {
   font-size: 75%;
@@ -179,6 +264,10 @@ textarea {
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
+}
+ul,
+nav {
+	list-style: none;
 }
 ::-webkit-input-placeholder {
   color: inherit;
