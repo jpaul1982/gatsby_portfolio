@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import weather from "../images/WeatherApp.png"
-import veronikas from "../images/Veronikas.png"
+import veronikas from "../images/veronikas.png"
 import withall from "../images/withall.png"
 import todo from "../images/todo.png"
 
